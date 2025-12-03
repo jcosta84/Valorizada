@@ -12,11 +12,11 @@ from streamlit_option_menu import option_menu
 # ==========================================
 # CONFIGURAÇÕES DO BANCO
 # ==========================================
-BD_SERVER = "192.168.38.28,1433"
-BD_NAME = "facturas"
-BD_USER = "paulo"
-BD_PASSWORD = "loucoste9309323"
-BD_DRIVER = "ODBC Driver 17 for SQL Server"
+BD_SERVER = st.secrets["BD_SERVER"]
+BD_NAME = st.secrets["BD_NAME"]
+BD_USER = st.secrets["BD_USER"]
+BD_PASSWORD = st.secrets["BD_PASSWORD"]
+BD_DRIVER = st.secrets["BD_DRIVER"]
 
 driver_encoded = quote_plus(BD_DRIVER)
 
