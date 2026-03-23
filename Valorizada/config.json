@@ -1,0 +1,6 @@
+{
+  "server": "192.168.38.28,1433",
+  "database": "facturas",
+  "user": "paulo",
+  "password": "loucoste9309323"
+}

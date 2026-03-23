@@ -6,17 +6,27 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 from urllib.parse import quote_plus
 from datetime import datetime
+import json
+import os
+
+from Valorizada_Parte2 import BD_DRIVER
+
+from Valorizada import BD_DRIVER
 
 # ===========================================================
 # CONFIGURAÇÃO DO BANCO
 # ===========================================================
 
-BD_SERVER = "192.168.38.28,1433"
-BD_NAME = "facturas"
-BD_USER = "paulo"
-BD_PASSWORD = "loucoste9309323"
-BD_DRIVER = "ODBC Driver 17 for SQL Server"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(BASE_DIR, "config.json")
 
+with open(config_path, "r") as f:
+    config = json.load(f)
+
+BD_SERVER = config["server"]
+BD_NAME = config["database"]
+BD_USER = config["user"]
+BD_PASSWORD = config["password"]
 driver_encoded = quote_plus(BD_DRIVER)
 
 DATABASE_URL = (

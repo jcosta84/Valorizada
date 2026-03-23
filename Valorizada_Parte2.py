@@ -9,7 +9,7 @@ from urllib.parse import quote_plus
 # ==========================================
 # CONFIGURAÇÕES DO BANCO
 # ==========================================
-BD_SERVER = "192.168.38.28,1433"
+BD_SERVER = "192.168.38.3,1433"
 BD_NAME = "facturas"
 BD_USER = "paulo"
 BD_PASSWORD = "loucoste9309323"
